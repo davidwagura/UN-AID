@@ -18,7 +18,7 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
-        $registerUserData = $request->validate
+        $data = $request->validate
         ([
             'first_name' => 'required|string',
             'last_name' => 'required|string',
@@ -28,10 +28,11 @@ class RegisterController extends Controller
 
         $user = User::create
         ([
-            'first_name' => $registerUserData['first_name'],
-            'last_name' => $registerUserData['last_name'],
-            'email' => $registerUserData['email'],
-            'password' => Hash::make($registerUserData['password']),
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'role' => $data['role'] ?? 'user', // Default role is 'user'
         ]);
 
         // if(!$user) {

@@ -10,7 +10,7 @@
         <!-- Title and Description -->
         <div class="flex flex-col md:flex-row justify-between items-start leading-loose space-y-8 md:space-y-0">
             <div class="w-full md:w-1/2">
-                <h1 class="font-semibold text-4xl md:text-6xl text-[#3862b6]">Empowering <br> Communities</h1>
+                <h1 class="font-semibold text-5xl md:text-6xl text-[#3862b6]">Empowering <br> Communities</h1>
             </div>
 
             <div class="w-full md:w-1/2 mt-10">

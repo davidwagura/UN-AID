@@ -21,7 +21,7 @@
             <a href="/" class="font-bold text-white text-2xl mb-4 md:mb-0">UN-AID</a>
         
             <!-- Navigation Menu -->
-            <nav class="flex flex-row lg:h-16 md:flex-row md:space-x-4 md:items-center w-full md:w-auto">
+            <nav class="flex flex-row lg:h-16 text-sm lg:text-base md:flex-row space-x-6 md:items-center w-full md:w-auto">
                 <a href="{{ route('services') }}" class="block md:inline-block p-2 text-white hover:text-[#ffb300] uppercase {{ request()->routeIs('services') ? 'text-[#ffb300]' : '' }}">Our Services</a>
                 <a href="{{ route('about') }}" class="block md:inline-block p-2 text-white hover:text-[#ffb300] uppercase {{ request()->routeIs('about') ? 'text-[#ffb300]' : '' }}">About Us</a>
                 <a href="{{ route('register') }}" class="block md:inline-block p-2 text-white hover:text-[#ffb300] uppercase {{ request()->routeIs('register') ? 'text-[#ffb300]' : '' }}">Register with Us</a>

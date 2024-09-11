@@ -15,8 +15,8 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 
 Route::get('/mission', [PageController::class, 'mission'])->name('mission');
 
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin/users', [AdminController::class, 'index'])->name('admin.users');
+Route::middleware(['auth', 'is_admin'])->group(function () {
+    Route::get('/admin/users', [PageController::class, 'index'])->name('admin.users');
 });
 
 Route::post('register', [RegisterController::class, 'register']);

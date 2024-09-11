@@ -18,13 +18,13 @@
         <div class="relative bg-gray-900 text-[#fefeff] h-screen flex items-center justify-center">
             <img id="heroImage" class="hero-image" src="{{ asset('images/s1.jpg') }}" alt="Hero Background">
             <div class="relative z-10 text-center">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+                <h1 class="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
                     Empowering Communities <br class="hidden md:inline"> Through Sustainable <br class="hidden md:inline"> Growth
                 </h1>
             </div>
         </div>
 
-        <div class="text-[#436bb9] text-4xl sm:text-5xl lg:text-6xl mt-16 font-bold m-8">
+        <div class="text-[#436bb9] text-5xl sm:text-5xl lg:text-6xl mt-16 font-bold m-8">
             <h1>Empowering <br> Communities</h1>
         </div>
 
@@ -56,7 +56,7 @@
 
             <!-- Text section -->
             <div class="w-full md:w-1/3 float-none md:float-right mt-8 md:mt-24 text-center md:text-left px-4 md:px-0">
-                <h1 class="text-[#4a70bc] text-6xl sm:text-5xl md:text-6xl font-bold leading-tight">
+                <h1 class="text-[#4a70bc] text-5xl sm:text-5xl md:text-6xl font-bold leading-tight">
                     Discover <br class="hidden md:inline"> the <br class="hidden md:inline"> essence of <br class="hidden md:inline"> our <br class="hidden md:inline"> mission
                 </h1>
                 <p class="pt-4 pb-6 leading-loose">
@@ -78,7 +78,7 @@
         <div class="flex flex-col justify-between md:flex-row m-8">
             <!-- Text section -->
             <div class="lg:w-1/3 md:text-left text-center w-full px-4 md:px-0 mr-6">
-                <h1 class="text-[#436bb9] text-4xl sm:text-5xl lg:text-6xl mb-8 mt-12 md:mt-24 font-bold leading-tight">
+                <h1 class="text-[#436bb9] text-5xl lg:text-6xl mb-8 mt-12 md:mt-24 font-bold leading-tight">
                     Join Our <br> mission
                 </h1>
                 <p class="pt-2 pb-2 leading-loose sm:leading-loose sm:text-lg">

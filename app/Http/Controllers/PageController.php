@@ -24,4 +24,13 @@ class PageController extends Controller
     {
         return view('pages.mission');
     }
+
+    public function index()
+    {
+        $users = User::all(); // Retrieve all users
+
+        return view('admin.users.index', compact('users')); // Return view with users
+
+    }
+    
 }
