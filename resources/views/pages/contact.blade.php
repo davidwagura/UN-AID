@@ -24,65 +24,63 @@
 
         <div class="mt-12">
 
-            <form method="POST" class="space-y-4">
-
+            <form method="POST" action="{{ route('register') }}" class="space-y-4">
                 @csrf
-
-                <p class="text-sm md:text-base">Name <span class="text-gray-600">(required)</span></p>
-
+            
+                <p class="text-2xl lg:text-center font-semibold text-[#4771be] underline">Register Here</p>
+            
                 <div class="flex flex-col gap-4 md:flex-row md:gap-6">
-
+            
                     <!-- First Name -->
                     <div class="flex-1">
                         <label for="first_name" class="block text-sm md:text-lg font-normal mb-1">First Name</label>
                         <input type="text" id="first_name" name="first_name" required
-                            class="block w-full px-3 py-2 border bg-[#ebe9ef] border-black rounded-full focus:outline-none focus:ring">
+                            class="block w-full px-3 py-2 border-gray-300 rounded-full focus:outline-none focus:ring">
                         @error('first_name')
                             <p class="text-red-500 text-xs md:text-sm mt-1">{{ $message }}</p>
                         @enderror
                     </div>
-
+            
                     <!-- Last Name -->
                     <div class="flex-1">
                         <label for="last_name" class="block text-sm md:text-lg font-normal mb-1">Last Name</label>
                         <input type="text" id="last_name" name="last_name" required
-                            class="block w-full px-3 py-2 border bg-[#ebe9ef] border-black rounded-full focus:outline-none focus:ring">
+                            class="block w-full px-3 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring">
                         @error('last_name')
                             <p class="text-red-500 text-xs md:text-sm mt-1">{{ $message }}</p>
                         @enderror
                     </div>
-
+            
                 </div>
-
+            
                 <!-- Email -->
                 <div>
                     <label for="email" class="block text-sm md:text-lg font-normal mb-1">Email <span class="text-gray-600">(required)</span></label>
                     <input type="email" id="email" name="email" required
-                        class="block w-full bg-[#ebe9ef] px-3 py-2 border border-black rounded-full focus:outline-none focus:ring">
+                        class="block w-full px-3 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring">
                     @error('email')
                         <p class="text-red-500 text-xs md:text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
-                <!-- Message -->
+            
+                <!-- Password -->
                 <div>
-                    <label for="message" class="block text-sm md:text-lg font-normal mb-1">Message <span class="text-gray-600">(required)</span></label>
-                    <textarea id="message" name="message" rows="4" required
-                        class="block w-full px-3 bg-[#ebe9ef] py-2 border border-black rounded-full focus:outline-none focus:ring"></textarea>
-                    @error('message')
+                    <label for="password" class="block text-sm md:text-lg font-normal mb-1">Password <span class="text-gray-600">(required)</span></label>
+                    <input type="password" id="password" name="password" required
+                        class="block w-full px-3 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring">
+                    @error('password')
                         <p class="text-red-500 text-xs md:text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
+                            
                 <div>
-                    <button type="submit"
-                        class="text-white bg-[#000000] w-24 rounded-full p-4">
-                        SEND
+                    <button type="submit" class="text-white bg-[#000000] w-full lg:w-32 rounded-full p-4">
+                        REGISTER
                     </button>
                 </div>
-
+            
             </form>
-
+            
         </div>
 
     </div>

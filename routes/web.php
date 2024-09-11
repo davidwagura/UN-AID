@@ -1,34 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\PageController;
 
-Route::get('/', function () {
+Route::get('/', [PageController::class, 'home'])->name('home');
 
-    return view('pages.home');
+Route::get('/services', [PageController::class, 'services'])->name('services');
 
-});
- 
+Route::get('/about', [PageController::class, 'about'])->name('about');
 
-Route::get('/services', function () {
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 
-    return view('pages.services');
+Route::get('/mission', [PageController::class, 'mission'])->name('mission');
 
-});
-
-Route::get('/about', function () {
-
-    return view('pages.about');
-
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/users', [AdminController::class, 'index'])->name('admin.users');
 });
 
-Route::get('/contact', function () {
-
-    return view('pages.contact');
-
-});
-
-Route::get('/mission', function () {
-
-    return view('pages.mission');
-
-});
+Route::post('register', [RegisterController::class, 'register']);
